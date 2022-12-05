@@ -73,11 +73,25 @@ const Home = () => {
 	};
 
 	//Actualizacion de estado de busqueda por tipo
-	const [Type, setType] = useState('');
+	const [Type, setType] = useState(null);
 	const [Name, setName] = useState(null);
 	console.log('NAME', Name);
 
 	// console.log('clg NAME', Name);
+	const GetAll = () => {
+		axios
+			.get('https://pokeapi.co/api/v2/pokemon')
+			.then((response) => {
+				let imgurls = response.data.results.map((element) => {
+					return element.url;
+				});
+				GetPokemon(imgurls, 'getAll');
+			})
+			.catch((error) => {
+				console.log('Peticion no lograda', error);
+			});
+	};
+
 	const GetByName = (Name) => {
 		console.log('NAME fun : GETBYNAME', Name);
 		axios
@@ -124,6 +138,11 @@ const Home = () => {
 
 	function handleSubmit(e) {
 		e.preventDefault();
+
+		if (Name && Type) {
+			alert('Ingresa una busqueda a la vez');
+			window.location.reload(true);
+		}
 		if (Name) GetByName(Name);
 		if (Type) GetByType(Type);
 	}
