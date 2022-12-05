@@ -163,7 +163,7 @@ const Home = () => {
 					<div className="Container_NavBar">
 						<form onSubmit={handleSubmit} className="NavBar">
 							<div className="ContainerInput">
-								<input placeholder="Tipo" name="Type" id="Type" onChange={(e) => setType(e.target.value)} />
+								<input placeholder="Tipo" name="Type" id="Type" onChange={(e) => setType(e.target.value.toLowerCase())} />
 								<button
 									className="BtnDelete"
 									onClick={() => {
@@ -173,7 +173,7 @@ const Home = () => {
 								</button>
 							</div>
 							<div className="ContainerInput">
-								<input placeholder="Nombre" name="Name" id="Name" onChange={(e) => setName(e.target.value)} />
+								<input placeholder="Nombre" name="Name" id="Name" onChange={(e) => setName(e.target.value.toLowerCase())} />
 								<button
 									className="BtnDelete"
 									onClick={() => {
