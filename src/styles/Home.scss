@@ -1,0 +1,110 @@
+.ContainerHome {
+	.Logo {
+		display: flex;
+		flex-direction: column;
+		width: fit-content;
+		margin: 10px 2rem;
+
+		h1 {
+			width: fit-content;
+			font-weight: bold;
+			margin-bottom: -25px;
+		}
+		h2 {
+			font-weight: 300;
+			display: flex;
+			justify-content: center;
+		}
+	}
+
+	//NAV
+	.Container_NavBar {
+		margin: 2rem 5rem;
+		border: solid #707070;
+		padding: 4rem;
+		height: 250px;
+		background: rgb(230, 19, 110);
+		background: linear-gradient(148deg, rgba(230, 19, 110, 1) 0%, rgba(187, 54, 142, 1) 35%, rgba(133, 74, 154, 1) 73%, rgba(48, 80, 119, 1) 100%);
+		align-items: center;
+		border-radius: 10px;
+		.NavBar {
+			display: flex;
+			justify-content: center;
+			gap: 20%;
+			margin-top: 3%;
+			align-items: center;
+			.ContainerInput {
+				display: flex;
+
+				input {
+					display: flex;
+					align-items: center;
+					height: 40px;
+					border-radius: 10px 0 0 10px;
+					padding: 5px;
+				}
+				::placeholder {
+					padding-left: 1rem;
+					font-size: large;
+				}
+				.BtnDelete {
+					display: flex;
+					justify-content: center;
+					align-items: center;
+					width: 40px;
+					height: 40px;
+					background-color: white;
+					border-radius: 0 10px 10px 0;
+				}
+			}
+
+			.Btn_Search {
+				font-size: 2rem;
+				color: white;
+				background: none;
+				border: none;
+				cursor: pointer;
+			}
+		}
+	}
+
+	.ContainerBtnDesign {
+		padding: 1rem;
+		display: flex;
+		justify-content: center;
+
+		.BtnDesign {
+			font-size: 2rem;
+			font-weight: 900;
+			transform: scaleX(-1);
+			background: none;
+			border: none;
+			cursor: pointer;
+		}
+	}
+
+	//FOOTER
+	.ContainerFooter {
+		display: flex;
+		justify-content: center;
+		flex-direction: column;
+		align-items: center;
+		margin: 3rem 0 0 0;
+		height: 150px;
+		background-repeat: no-repeat;
+		.BtnMore {
+			width: fit-content;
+			padding: 1rem 3rem;
+			border: solid gray;
+			font-weight: 500;
+			color: grayh;
+			background: none;
+			cursor: pointer;
+			border-radius: 10px;
+		}
+		.ImgFooter {
+			width: 100%;
+			height: 140px;
+		}
+	}
+}

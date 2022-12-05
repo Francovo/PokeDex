@@ -1,0 +1,29 @@
+.ContainerPokeImg {
+	margin: 2rem;
+	width: 96%;
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: center;
+	gap: 1.7rem;
+}
+
+//Componente de cambio de anchura en la pagina
+.ContainerPokeImg2 {
+	margin: 2rem;
+	width: 96%;
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+	gap: 1.7rem;
+}
+
+.PokeImg {
+	margin-top: 10rem;
+	margin: 20px 30px;
+	width: 300px;
+	cursor: pointer;
+	background: rgb(230, 19, 110);
+	background: linear-gradient(148deg, rgba(230, 19, 110, 1) 0%, rgba(187, 54, 142, 1) 35%, rgba(133, 74, 154, 1) 73%, rgba(48, 80, 119, 1) 100%);
+	border-radius: 10px;
+}
