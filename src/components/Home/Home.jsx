@@ -161,33 +161,31 @@ const Home = () => {
 						<h2>3D.STUDIO</h2>
 					</button>
 					<div className="Container_NavBar">
-						<div>
-							<form onSubmit={handleSubmit} className="NavBar">
-								<div className="ContainerInput">
-									<input placeholder="Tipo" name="Type" id="Type" onChange={(e) => setType(e.target.value)} />
-									<button
-										className="BtnDelete"
-										onClick={() => {
-											document.querySelector('#Type').value = '';
-										}}>
-										<GrClose />
-									</button>
-								</div>
-								<div className="ContainerInput">
-									<input placeholder="Nombre" name="Name" id="Name" onChange={(e) => setName(e.target.value)} />
-									<button
-										className="BtnDelete"
-										onClick={() => {
-											document.querySelector('#Name').value = '';
-										}}>
-										<GrClose />
-									</button>
-								</div>
-								<button className="Btn_Search" type={'submit'}>
-									<ImSearch />
+						<form onSubmit={handleSubmit} className="NavBar">
+							<div className="ContainerInput">
+								<input placeholder="Tipo" name="Type" id="Type" onChange={(e) => setType(e.target.value)} />
+								<button
+									className="BtnDelete"
+									onClick={() => {
+										document.querySelector('#Type').value = '';
+									}}>
+									<GrClose />
 								</button>
-							</form>
-						</div>
+							</div>
+							<div className="ContainerInput">
+								<input placeholder="Nombre" name="Name" id="Name" onChange={(e) => setName(e.target.value)} />
+								<button
+									className="BtnDelete"
+									onClick={() => {
+										document.querySelector('#Name').value = '';
+									}}>
+									<GrClose />
+								</button>
+							</div>
+							<button className="Btn_Search" type={'submit'}>
+								<ImSearch />
+							</button>
+						</form>
 					</div>
 
 					<div className="ContainerBtnDesign">
@@ -203,7 +201,7 @@ const Home = () => {
 						</button>
 					</div>
 
-					<div>
+					<div className="ContainerCardPokemon">
 						<Suspense fallback={<h1>Cargando...</h1>}>
 							<Pokemons data={dataPokemon} />
 						</Suspense>

@@ -4,10 +4,6 @@ import React, { useEffect, useState } from 'react';
 import { GrClose } from 'react-icons/gr';
 
 export const ModalDetails = ({ Pokemon, isOpen, onClose }) => {
-	// useEffect(() => {
-	// 	Pokemon ? console.log('data de cards', Pokemon.abilities) : <></>;
-	// }, [Pokemon]);
-
 	//Peticion a la URL de detalles
 	const [description, setDescription] = useState(null);
 	// eslint-disable-next-line no-lone-blocks
@@ -37,14 +33,15 @@ export const ModalDetails = ({ Pokemon, isOpen, onClose }) => {
 					<ModalOverlay />
 					<ModalContent bg="transparent" marginTop="10%">
 						<ModalBody borderRadius="40px" display="flex" flexDirection="column" backgroundImage="linear-gradient(to right bottom, #e6136e, #dc5ea1, #cc8bc2, #c2aecf, #cbcbcb)">
-							<Box display="flex" gap="2">
-								<Box display="flex">
-									<Button id="closeModal" onClick={onClose} width="70px" border="solid 1px" borderRadius="10px" marginTop="15px" background="none">
+							<Box display="flex" flexDirection={{ base: 'column', md: 'row' }} gap="2">
+								<Box display="flex" justifyContent={{ base: 'center' }} flexDirection={{ base: 'column', sm: 'row' }}>
+									<Button id="closeModal" onClick={onClose} width={{ base: '100px', sm: '70px' }} border="solid 1px" borderRadius="10px" marginTop="15px" background="none">
 										<GrClose />
 									</Button>
-									<Img src={Pokemon.img} width="500px" />
+									<Img src={Pokemon.img} width={{ base: 'none', sm: 'none' }} />
 								</Box>
-								<Box width="40%" padding="10px" display="flex" flexDirection="column" alignItems="center">
+
+								<Box width={{ base: '100%', dm: '40%' }} padding="10px" display="flex" flexDirection="column" alignItems="center">
 									<Box fontWeight="bold" display="flex" fontSize="2xl" textTransform="uppercase">
 										{Pokemon.id} - {Pokemon.name}
 									</Box>
