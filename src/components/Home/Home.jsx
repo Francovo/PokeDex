@@ -168,6 +168,7 @@ const Home = () => {
 									className="BtnDelete"
 									onClick={() => {
 										document.querySelector('#Type').value = '';
+										setType('');
 									}}>
 									<GrClose />
 								</button>
@@ -178,6 +179,7 @@ const Home = () => {
 									className="BtnDelete"
 									onClick={() => {
 										document.querySelector('#Name').value = '';
+										setName('');
 									}}>
 									<GrClose />
 								</button>
