@@ -8,7 +8,6 @@ const Pokemons = ({ data }) => {
 	//Estado de espera al iniciar Pagina
 	const [count, setCount] = useState(0);
 
-	console.log('Data de Pokemon', data);
 	return (
 		<div className="ContainerPokeImg">
 			<ModalDetails
@@ -21,7 +20,7 @@ const Pokemons = ({ data }) => {
 
 			{data.map((pokemon, index) => (
 				<img
-					key={`nombre-${pokemon.name}`}
+					key={`nombre-${index}`}
 					alt=""
 					src={pokemon.img}
 					onClick={() => {
